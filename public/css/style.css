@@ -1,0 +1,42 @@
+body {
+  overflow-x: hidden;
+}
+
+.full-width-1 {
+  background: #cbf9a4;
+}
+
+.full-width-2 {
+  background: #a4c5f9;
+}
+
+.full-width-3 {
+  background: #3570ce;
+}
+
+.full-width-4 {
+  background: #c2bee0;
+}
+
+.text-center img {
+  border-radius: 100%;
+  border: 2px solid #3570ce;
+}
+
+.formulario-login {
+  width: 225px;
+}
+
+hr {
+  background-color: success;
+  height: 1px;
+  border: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
