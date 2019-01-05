@@ -42,6 +42,8 @@ function verificarCampos() {
         if (resp.resp == 1) {
           traerServicios();
           mostrarAlerta("success", "Servicio registrado con éxito.");
+          nombreServicio.value = "";
+          valorServicio.value = "";
         } else {
           mostrarAlerta("danger", "El servicio ya se ha registrado antes.");
         }

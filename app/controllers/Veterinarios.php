@@ -30,4 +30,24 @@ class Veterinarios extends Controller{
           
        }
 
+       public function obtenerVeterinarios(){     
+        if($_SERVER["REQUEST_METHOD"] == "GET"){           
+                 
+            echo json_encode($this->veterinarioModel->obtenerVeterinarios());
+        }
+      }
+
+      public function eliminarVeterinario($id){
+        if($_SERVER["REQUEST_METHOD"] == "DELETE"){                              
+            
+              $resp =  $this->veterinarioModel->borrarVeterinario($id);
+
+              $respuesta = ["resp" => $resp];
+
+              echo json_encode($respuesta);
+          }
+     }
+
+
+
 }

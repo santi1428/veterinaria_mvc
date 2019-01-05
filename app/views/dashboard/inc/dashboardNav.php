@@ -98,7 +98,7 @@
             <ul class="nav d-flex flex-column">
               <li class="nav-item pb-2 pt-2">
                 <a
-                  href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                  href="<?php echo URLROOT ?>dashboard/registrarVeterinario"
                   class="text-white"
                   style="font-size:15px;"
                   >Registrar Veterinario</a

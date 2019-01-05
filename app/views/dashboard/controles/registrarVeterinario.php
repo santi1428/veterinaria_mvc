@@ -120,7 +120,7 @@
         </div>
       </div>
     </div>
-    <!-- <div
+    <div
       class="modal fade"
       id="exampleModalCenter"
       tabindex="-1"
@@ -131,7 +131,7 @@
       <div class="modal-dialog modal-dialog-top" role="document">
         <div class="modal-content">
           <div class="modal-header d-flex flex-row">
-            <h3 class="modal-title text-danger ml-auto">Eliminar mascota</h3>
+            <h3 class="modal-title text-danger ml-auto">Eliminar veterinario</h3>
             <button
               type="button"
               class="close"
@@ -146,10 +146,9 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col">
-                  <p class="text-center" id="mensaje">
-                    ¿Estas seguro de eliminar la mascota
-                    <strong>Paco</strong> de raza <strong>Bulldog</strong> con
-                    <strong>25</strong> años?
+                  <p class="text-justify" id="mensaje">
+                    ¿Estas seguro de eliminar el veterinario
+                    <strong>Paco</strong> con Cedula de ciudadania <strong>123458641</strong>?
                   </p>
                   <div class="row mt-3">
                     <div class="col">
@@ -180,7 +179,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </div>
 <div style="height:495px"></div>
