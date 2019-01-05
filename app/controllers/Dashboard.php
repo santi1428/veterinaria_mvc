@@ -35,6 +35,10 @@
                  $this->view("dashboard/servicios/registrarServicio");  
            }
 
+           public function registrarVeterinario(){
+            $this->view("dashboard/controles/registrarVeterinario");  
+           }
+
       }
 
 ?>

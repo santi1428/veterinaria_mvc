@@ -81,13 +81,33 @@
           </div>
         </div>
       </li>
-      <div class="card-header rounded-bottom" style="background:#33ba27;">
-        <li class="nav-item">
-          <a class="nav-link text-white p-0 m-0" href="#"
+      <li class="nav-item">
+        <div class="card-header" style="background:#33ba27;">
+          <a
+            class="text-white nav-link p-0"
+            data-toggle="collapse"
+            href="#collapseControles"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseControles"
             ><i class="fal fa-money-bill"></i> Controles</a
           >
-        </li>
-      </div>
+        </div>
+        <div class="collapse" id="collapseControles">
+          <div class="">
+            <ul class="nav d-flex flex-column">
+              <li class="nav-item pb-2 pt-2">
+                <a
+                  href="<?php echo URLROOT ?>dashboard/registrarServicio"
+                  class="text-white"
+                  style="font-size:15px;"
+                  >Registrar Veterinario</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
 </div>
