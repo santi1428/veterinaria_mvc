@@ -104,6 +104,14 @@
                   >Registrar Veterinario</a
                 >
               </li>
+              <li class="nav-item pb-2 pt-2">
+                <a
+                  href="<?php echo URLROOT ?>dashboard/registrarControl"
+                  class="text-white"
+                  style="font-size:15px;"
+                  >Registrar Control</a
+                >
+              </li>
             </ul>
           </div>
         </div>

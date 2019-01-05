@@ -39,6 +39,10 @@
             $this->view("dashboard/controles/registrarVeterinario");  
            }
 
+           public function registrarControl(){
+                $this->view("dashboard/controles/registrarControl");
+           }
+
       }
 
 ?>
