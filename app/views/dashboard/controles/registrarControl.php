@@ -5,12 +5,9 @@
 <?php include  APPROOT."/views/dashboard/inc/dashboardNav.php"; ?>
 <div class="container registrarVeterinario">
   <div class="pl-0 col-12">
-    <div class="row">
+    <div class="row mt-1">
       <div class="col">
         <div class="form-group">
-          <label for="seleccionCliente" class="font-italic font-weight-bold"
-            >Cliente</label
-          >
           <div class="input-group">
             <div class="input-group-prepend">
               <span class="input-group-text"
@@ -22,9 +19,7 @@
               id="seleccionCliente"
               name="seleccionCliente"
             >
-              <option value="0" selected
-                >Seleccione el cliente de la mascota</option
-              >
+              <option value="0" selected>Seleccione el cliente</option>
               <?php listarClientes($data["clientes"]); ?>
             </select>
             <div class="invalid-feedback"></div>
@@ -33,19 +28,15 @@
       </div>
       <div class="col">
         <div class="form-group">
-          <label for="seleccionCliente" class="font-italic font-weight-bold"
-            >Mascota</label
-          >
           <div class="input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text"
-                ><i class="fas fa-id-card"></i
-              ></span>
+              <span class="input-group-text"><i class="fal fa-paw"></i></span>
             </div>
             <select
               class="custom-select"
-              id="seleccionCliente"
-              name="seleccionCliente"
+              id="seleccionMascota"
+              name="seleccionMascota"
+              disabled
             >
               <option value="0" selected
                 >Seleccione la mascota del cliente
