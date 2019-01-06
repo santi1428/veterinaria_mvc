@@ -40,7 +40,9 @@
            }
 
            public function registrarControl(){
-                $this->view("dashboard/controles/registrarControl");
+                $clientes = $this->clienteModel->obtenerClientes();
+                $data = ["clientes" => $clientes];
+                $this->view("dashboard/controles/registrarControl", $data);
            }
 
       }

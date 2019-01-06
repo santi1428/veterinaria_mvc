@@ -6,7 +6,55 @@
 <div class="container registrarVeterinario">
   <div class="pl-0 col-12">
     <div class="row">
-      <div class="col"><h1>Registro de controles</h1></div>
+      <div class="col">
+        <div class="form-group">
+          <label for="seleccionCliente" class="font-italic font-weight-bold"
+            >Cliente</label
+          >
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-id-card"></i
+              ></span>
+            </div>
+            <select
+              class="custom-select"
+              id="seleccionCliente"
+              name="seleccionCliente"
+            >
+              <option value="0" selected
+                >Seleccione el cliente de la mascota</option
+              >
+              <?php listarClientes($data["clientes"]); ?>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="seleccionCliente" class="font-italic font-weight-bold"
+            >Mascota</label
+          >
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fas fa-id-card"></i
+              ></span>
+            </div>
+            <select
+              class="custom-select"
+              id="seleccionCliente"
+              name="seleccionCliente"
+            >
+              <option value="0" selected
+                >Seleccione la mascota del cliente
+              </option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
