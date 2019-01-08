@@ -1,6 +1,6 @@
 <?php 
       class Dashboard extends Controller{
-          private $mascotaModel, $clienteModel;  
+          private $mascotaModel, $clienteModel, $servicioModel, $veterinarioModel;  
           
           public function __construct(){
                 if(!isset($_SESSION["empleadoUsuario"])){
@@ -8,6 +8,8 @@
                 }else{   
                     $this->mascotaModel = $this->model("Mascota");
                     $this->clienteModel = $this->model("Cliente");
+                    $this->servicioModel = $this->model("Servicio");
+                    $this->veterinarioModel = $this->model("Veterinario");
                 }
           }
 
@@ -41,7 +43,12 @@
 
            public function registrarControl(){
                 $clientes = $this->clienteModel->obtenerClientes();
-                $data = ["clientes" => $clientes];
+                $servicios = $this->servicioModel->obtenerServicios();
+                $veterinarios = $this->veterinarioModel->obtenerVeterinarios();
+                
+                $data = ["clientes" => $clientes,
+                         "servicios" => $servicios,
+                        "veterinarios" => $veterinarios];
                 $this->view("dashboard/controles/registrarControl", $data);
            }
 
