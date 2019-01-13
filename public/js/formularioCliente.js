@@ -166,8 +166,6 @@ function eliminarMascotadelArreglo(mascotaEliminada) {
       mascotasEnvio.splice(index, 1);
     }
   });
-
-  console.log(mascotasEnvio.length);
 }
 
 function enumerarMascotas() {

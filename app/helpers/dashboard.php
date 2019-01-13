@@ -14,7 +14,7 @@ function listarClientes($data){
 
 function listarServicios($data){
         foreach ($data as $servicio){
-            echo '<option value = "'.$servicio -> CODIGO.'">'.$servicio -> TIPO.' - Valor: '.$servicio -> VALOR.'$'.'</option>';
+            echo '<option value = "'.$servicio -> CODIGO.'">'.$servicio -> TIPO.' - '.$servicio -> VALOR.'$'.'</option>';
         }
 }
 
