@@ -27,6 +27,7 @@ let tablaContenidoInicial = `<tr id="vacio">
 </tr>`;
 let servicios = [];
 let valorTotal = 0;
+let ventana = document.getElementById("exampleModalCenter");
 btnRegistrarControl.disabled = true;
 rdProximaFechaSel.disabled = true;
 proximaFechaSel.disabled = true;
@@ -372,8 +373,27 @@ function recolectarDatos(fecha) {
     objDatos.fechaActual = sumarDias(0);
     objDatos.serviciosEnvio = servicios;
     objDatos.valorTotal = valorTotal;
-    console.log(objDatos);
+    enviarDatos(objDatos);
   }
+}
+
+function enviarDatos(objDatos) {
+  peticiones
+    .post(
+      "http://localhost/veterinaria_mvc/controles/registrarControl",
+      objDatos
+    )
+    .then(resp => {
+      if (resp.resp == 0) {
+        borrarCampos();
+        seleccionCliente.value = 0;
+        seleccionMascota.value = 0;
+        servicios = [];
+        mostrarVentana(resp.resp, "Registro del Control exitoso!");
+        comprobarCampos();
+      }
+    })
+    .catch(e => console.log(e));
 }
 
 function mostrarAlertaError() {
@@ -405,6 +425,60 @@ function sumarDias(dias) {
   }
   var fecha = `${yyyy}-${mm}-${dd}`;
   return fecha;
+}
+
+function mostrarVentana(resp, msg) {
+  if (resp == 0) {
+    ventana.innerHTML = `<div class="modal-dialog modal-dialog-top" role="document">
+      <div class="modal-content">
+        <div class="modal-header d-flex flex-row">
+          <h3 class="modal-title text-success ml-auto">
+            Guardado exitoso!
+          </h3>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div
+          class="modal-body text-success d-flex justify-content-center mt-0 pt-0"
+        >
+          ${msg}
+        </div>
+      </div>
+    </div>`;
+    $("#exampleModalCenter").modal("toggle");
+  } else {
+    ventana.innerHTML = `<div class="modal-dialog modal-dialog-top" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-flex flex-row">
+        <h3 class="modal-title text-danger ml-auto">
+          Error de guardado
+        </h3>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div
+        class="modal-body text-danger d-flex justify-content-center mt-0 pt-0"
+      >
+        ${msg}
+      </div>
+    </div>
+  </div>`;
+    $("#exampleModalCenter").modal("toggle");
+  }
 }
 
 function setErrorMessage(input, msg) {
