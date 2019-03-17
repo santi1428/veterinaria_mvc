@@ -39,6 +39,10 @@
             $this->view("dashboard/controles/registrarVeterinario");  
            }
 
+           public function clientes(){
+                $this->view("dashboard/clientes/modificarCliente");
+           }
+
       }
 
 ?>

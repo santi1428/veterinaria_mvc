@@ -20,6 +20,13 @@ class Mascota extends Database{
              return  $this->rowCount();
     }
 
+    
+    public function obtenerTotalMascotas(){ 
+       $this->query("SELECT COUNT(M.ID) AS 'NUMEROTOTALMASCOTAS' FROM mascota M");
+       return $this->single();
+ }
+
+
        
 
 }

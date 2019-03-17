@@ -93,6 +93,17 @@
                               }
                         }
             }
+
+
+            public function obtenerClientesConMascotas(){
+                     echo json_encode($this->clienteModel->obtenerClientesConMascotas());
+            }
+
+            public function obtenerNumeroMascotas(){
+                     $numero = $this->mascotaModel->obtenerTotalMascotas();
+                     $respuesta = ["numero" => $numero];
+                     echo json_encode($respuesta);
+            }
           
                
 
