@@ -10,7 +10,7 @@
           <div class="row">
             <div class="col-lg-6 col-xl-6">
               <img
-                src="<?php echo URLROOT;?>public/img/inicio/vet-final.png"
+                src="<?php echo URLROOT;?>img/inicio/vet-final.png"
                 alt=""
                 class="img-fluid mt-5 mt-sm-3 imagen-encabezado"
               />
@@ -53,19 +53,19 @@
   <div class="container">
     <div class="row">
       <div class="col text-center mb-3">
-        <img src="<?php echo URLROOT;?>public/img/inicio/1.png" />
+        <img src="<?php echo URLROOT;?>img/inicio/1.png" />
         <p class="h5 mt-2">Vacunación</p>
       </div>
       <div class="col text-center mb-3">
-        <img src="<?php echo URLROOT;?>public/img/inicio/2.png" />
+        <img src="<?php echo URLROOT;?>img/inicio/2.png" />
         <p class="h5 mt-2">Peluqueria</p>
       </div>
       <div class="col text-center mb-3">
-        <img src="<?php echo URLROOT;?>public/img/inicio/3.png" />
+        <img src="<?php echo URLROOT;?>img/inicio/3.png" />
         <p class="h5 mt-2">Consulta Veterinaria</p>
       </div>
       <div class="col text-center mb-3">
-        <img src="<?php echo URLROOT;?>public/img/inicio/4.png" />
+        <img src="<?php echo URLROOT;?>img/inicio/4.png" />
         <p class="h5 mt-2">Guarderia</p>
       </div>
     </div>
