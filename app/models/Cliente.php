@@ -68,6 +68,9 @@ class Cliente extends Database{
              return $this->resultSet();
       }
 
-
+      public function obtenerClientesConMascotas(){
+        $this->query("SELECT C.ID, C.NOMBRE, C.TIPODOCUMENTO, COUNT(M.IDCLIENTE) AS `NUMEROMASCOTAS` FROM cliente C INNER JOIN mascota M on M.IDCLIENTE = C.ID GROUP BY (C.ID)");
+       return $this->resultSet();
+}
 
 } 
