@@ -92,7 +92,7 @@ function llenarTabla(veterinarios) {
           </tr>`;
   });
   tablaVeterinarios.innerHTML = output;
-  enumerarMascotas();
+  enumerarVeterinarios();
 }
 
 function mostrarAlerta(alerta, msg) {
@@ -132,7 +132,7 @@ function ventanaBorrarVeterinario() {
   $("#exampleModalCenter").modal({ backdrop: "static", keyboard: false });
 }
 
-function enumerarMascotas() {
+function enumerarVeterinarios() {
   let c = 1;
   document.querySelectorAll(".table tbody tr").forEach(tr => {
     tr.children[0].textContent = c;
