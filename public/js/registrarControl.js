@@ -116,7 +116,7 @@ function borrarCampos() {
 function traerMascotas(id) {
   return new Promise(resolve => {
     peticiones
-      .get(`http://localhost/veterinaria_mvc/clientes/mascotas/${id}`)
+      .get(`http://191.232.246.84/clientes/mascotas/${id}`)
       .then(mascotas => resolve(llenarSeleccionMascota(mascotas)))
       .catch(e => console.log(e));
   });
@@ -380,7 +380,7 @@ function recolectarDatos(fecha) {
 function enviarDatos(objDatos) {
   peticiones
     .post(
-      "http://localhost/veterinaria_mvc/controles/registrarControl",
+      "http://191.232.246.84/controles/registrarControl",
       objDatos
     )
     .then(resp => {
