@@ -49,6 +49,14 @@
                   >Registrar mascota</a
                 >
               </li>
+              <li class="nav-item pb-2">
+                <a
+                  href="<?php echo URLROOT ?>dashboard/clientes"
+                  class="text-white"
+                  style="font-size:15px;"
+                  >Clientes</a
+                >
+              </li>
             </ul>
           </div>
         </div>

@@ -50,6 +50,11 @@
                          "servicios" => $servicios,
                         "veterinarios" => $veterinarios];
                 $this->view("dashboard/controles/registrarControl", $data);
+
+           }
+               
+           public function clientes(){
+                $this->view("dashboard/clientes/modificarCliente");
            }
 
       }

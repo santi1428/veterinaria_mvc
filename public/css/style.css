@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .full-width-1 {
-  background: #cbf9a4;
+  background: #E4CCB4;
 }
 
 .full-width-2 {
-  background: #a4c5f9;
+  background: #d3b8ff;
 }
 
 .full-width-3 {
@@ -15,7 +18,7 @@ body {
 }
 
 .full-width-4 {
-  background: #c2bee0;
+  background: #C0C3C5;
 }
 
 .text-center img {
