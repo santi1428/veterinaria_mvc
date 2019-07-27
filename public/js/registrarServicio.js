@@ -35,7 +35,7 @@ function verificarCampos() {
 
     peticiones
       .post(
-        "http://localhost/veterinaria_mvc/Servicios/anadirServicio",
+        "http://191.232.246.84/Servicios/anadirServicio",
         objServicio
       )
       .then(resp => {
@@ -54,7 +54,7 @@ function verificarCampos() {
 
 function traerServicios() {
   peticiones
-    .get("http://localhost/veterinaria_mvc/Servicios/servicios")
+    .get("http://191.232.246.84/Servicios/servicios")
     .then(resp => llenarTabla(resp))
     .catch(e => console.log(e));
 }
@@ -126,7 +126,7 @@ function obtenerServicio(e) {
 function eliminarServicio() {
   peticiones
     .delete(
-      `http://localhost/veterinaria_mvc/Servicios/eliminarServicio/${datos[0]}`
+      `http://191.232.246.84/Servicios/eliminarServicio/${datos[0]}`
     )
     .then(resp => {
       if (resp.resp == 1) {

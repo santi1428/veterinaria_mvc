@@ -250,7 +250,7 @@ function guardarDatos() {
 
       http
         .post(
-          "http://localhost/veterinaria_mvc/clientes/ingresarcliente",
+          "http://191.232.246.84/clientes/ingresarcliente",
           datosEnvio
         )
         .then(resp => {

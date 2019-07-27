@@ -9,7 +9,7 @@ let busqueda = document.getElementById("busqueda");
 busqueda.addEventListener("keyup", buscar);
 function traerClientes() {
   peticiones
-    .get("http://localhost/veterinaria_mvc/clientes/obtenerClientesConMascotas")
+    .get("http://191.232.246.84/clientes/obtenerClientesConMascotas")
     .then(resp => {
       clientes = resp;
       llenarTabla(resp);
@@ -18,7 +18,7 @@ function traerClientes() {
 
 function obtenerNumeroMascotas() {
   peticiones
-    .get("http://localhost/veterinaria_mvc/clientes/obtenerNumeroMascotas")
+    .get("http://191.232.246.84/clientes/obtenerNumeroMascotas")
     .then(
       resp =>
         (document.querySelector(".badge-primary").innerHTML =

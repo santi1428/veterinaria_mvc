@@ -48,7 +48,7 @@ function verificarCampos() {
 
     peticiones
       .post(
-        "http://localhost/veterinaria_mvc/Veterinarios/registrarVeterinario",
+        "http://191.232.246.84/Veterinarios/registrarVeterinario",
         objAux
       )
       .then(resp => {
@@ -71,7 +71,7 @@ function verificarCampos() {
 
 function traerVeterinarios() {
   peticiones
-    .get("http://localhost/veterinaria_mvc/Veterinarios/obtenerVeterinarios")
+    .get("http://191.232.246.84/Veterinarios/obtenerVeterinarios")
     .then(resp => llenarTabla(resp))
     .catch(e => console.log(e));
 }
@@ -143,7 +143,7 @@ function enumerarMascotas() {
 function eliminarVeterinario() {
   peticiones
     .delete(
-      `http://localhost/veterinaria_mvc/Veterinarios/eliminarVeterinario/${
+      `http://191.232.246.84/Veterinarios/eliminarVeterinario/${
         datos[2]
       }`
     )

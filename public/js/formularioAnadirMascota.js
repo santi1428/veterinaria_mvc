@@ -28,7 +28,7 @@ function traerMascotas() {
   clienteId = cliente.options[cliente.selectedIndex].value;
   if (clienteId != 0) {
     peticiones
-      .get(`http://localhost/veterinaria_mvc/clientes/mascotas/${clienteId}`)
+      .get(`http://191.232.246.84/clientes/mascotas/${clienteId}`)
       .then(mascotas => llenarTabla(mascotas))
       .catch(e => console.log(e));
     document.getElementById("anadirMascota").disabled = false;
@@ -98,7 +98,7 @@ function ventanaBorrarMascota() {
 
 function eliminarMascota() {
   peticiones
-    .delete(`http://localhost/veterinaria_mvc/clientes/mascotas/${datos[1].id}`)
+    .delete(`http://191.232.246.84/clientes/mascotas/${datos[1].id}`)
     .then(resp => {
       if (resp.resp == 1) {
         mascotaEliminar.remove();
@@ -148,7 +148,7 @@ function agregarMascota() {
 
     peticiones
       .post(
-        "http://localhost/veterinaria_mvc/clientes/anadirMascota",
+        "http://191.232.246.84/clientes/anadirMascota",
         objMascota
       )
       .then(resp => {
